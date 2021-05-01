@@ -37,6 +37,6 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  //   boxEl.innerHTML = "";
+  //   boxEl.innerHTML = "";    // другой способ
   boxEl.remove();
 }
