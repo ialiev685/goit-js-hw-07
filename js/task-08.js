@@ -19,20 +19,21 @@ clearBtnEl.addEventListener("click", () => {
 });
 
 function createBoxes(amount) {
-  const divs = [];
-
-  for (let i = 0; i < amount; i += 1) {
-    const div = document.createElement("div");
-    let r = Math.random() * (255 - 1) + 1;
-    let g = Math.random() * (255 - 1) + 1;
-    let b = Math.random() * (255 - 1) + 1;
-    div.style.width = sizeWidth + "px";
-    div.style.height = sizeHeight + "px";
-    div.style.backgroundColor = `rgb(${r},${g},${b})`;
-    sizeWidth += 10;
-    sizeHeight += 10;
-    divs.push(div);
-  }
+  const count = Number(amount);
+  const divs = Array(count)
+    .fill()
+    .map((elem) => {
+      const div = document.createElement("div");
+      let r = Math.random() * (255 - 1) + 1;
+      let g = Math.random() * (255 - 1) + 1;
+      let b = Math.random() * (255 - 1) + 1;
+      div.style.width = sizeWidth + "px";
+      div.style.height = sizeHeight + "px";
+      div.style.backgroundColor = `rgb(${r},${g},${b})`;
+      sizeWidth += 10;
+      sizeHeight += 10;
+      return div;
+    });
 
   boxEl.append(...divs);
 }
