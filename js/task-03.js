@@ -19,7 +19,7 @@ const ulEl = document.querySelector("#gallery");
 
 const items = images
   .map((element) => {
-    return `<li><img src=${element.url} alt=${element.alt}></li>`;
+    return `<li><img src='${element.url}' alt='${element.alt}'></li>`;
   })
   .join("");
 

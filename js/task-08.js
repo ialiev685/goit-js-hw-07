@@ -33,6 +33,7 @@ function createBoxes(amount) {
     sizeHeight += 10;
     divs.push(div);
   }
+
   boxEl.append(...divs);
 }
 
