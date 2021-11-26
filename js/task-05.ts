@@ -1,9 +1,11 @@
-"use strict";
-
-var inputEl = document.querySelector("#name-input");
+const inputEl = document.querySelector("#name-input") as HTMLElement;
 inputEl.addEventListener("input", onInput);
-var nameOutputEl = document.querySelector("#name-output");
-function onInput(event) {
+
+const nameOutputEl = document.querySelector("#name-output") as HTMLElement;
+
+
+
+function onInput(event:any) {
   console.log(event);
   if (event.target.value !== "") {
     nameOutputEl.textContent = event.target.value;
@@ -11,3 +13,5 @@ function onInput(event) {
     nameOutputEl.textContent = "незнакомец";
   }
 }
+
+export{}

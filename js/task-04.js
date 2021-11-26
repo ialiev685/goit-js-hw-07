@@ -1,19 +1,20 @@
-let counterValue = 0;
+"use strict";
 
-const counterValueEl = document.querySelector("#value");
-
-const decBtnEl = document.querySelector("button[data-action='decrement']");
-decBtnEl.addEventListener("click", onDecBtnClick);
-
+var counterValue = 0;
+var counterValueEl = document.querySelector("#value");
+var decBtnEl = document.querySelector("button[data-action='decrement']");
+decBtnEl === null || decBtnEl === void 0
+  ? void 0
+  : decBtnEl.addEventListener("click", onDecBtnClick);
 function onDecBtnClick() {
   counterValue -= 1;
-  counterValueEl.textContent = counterValue;
+  counterValueEl.textContent = String(counterValue);
 }
-
-const incBtnEl = document.querySelector("button[data-action='increment']");
-incBtnEl.addEventListener("click", onIncBtnClick);
-
+var incBtnEl = document.querySelector("button[data-action='increment']");
+incBtnEl === null || incBtnEl === void 0
+  ? void 0
+  : incBtnEl.addEventListener("click", onIncBtnClick);
 function onIncBtnClick() {
   counterValue += 1;
-  counterValueEl.textContent = counterValue;
+  counterValueEl.textContent = String(counterValue);
 }

@@ -1,4 +1,6 @@
-const ingredients = [
+"use strict";
+
+var ingredients = [
   "Картошка",
   "Грибы",
   "Чеснок",
@@ -6,12 +8,13 @@ const ingredients = [
   "Зелень",
   "Приправы",
 ];
-const ulEl = document.querySelector("#ingredients");
-
-const items = ingredients.map((elem) => {
-  const liEl = document.createElement("li");
+var ulEl = document.querySelector("#ingredients");
+console.dir(ulEl);
+var items = ingredients.map(function (elem) {
+  var liEl = document.createElement("li");
   liEl.textContent = elem;
   return liEl;
 });
+ulEl.append.apply(ulEl, items);
 
-ulEl.append(...items);
+export {};
